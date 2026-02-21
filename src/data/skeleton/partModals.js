@@ -1,6 +1,18 @@
 export const partModels = {
   skull: "/models/skeleton/skull.glb",
-  // later:
-  // femur: "/models/femur.glb",
-  // spine: "/models/spine.glb",
+  foot: "/models/skeleton/foot.glb",
+  femur: "/models/skeleton/femur.glb",
+  tibia: "/models/skeleton/tibia.glb",
+  fibula: "/models/skeleton/fibula.glb",
+  spine: "/models/skeleton/spine.glb",
+  pelvis: "/models/skeleton/pelvis.glb",
+  hand: "/models/skeleton/hand.glb",
+  ulna: "/models/skeleton/ulna.glb",
+  radius: "/models/skeleton/radius.glb",
+  humerus: "/models/skeleton/humerus.glb",
+  sternum: "/models/skeleton/sternum.glb",
+  rib_cage: "/models/skeleton/rib_cage.glb",
+  clavicle: "/models/skeleton/collar_bone.glb",
+  scapula: "/models/skeleton/shoulder_blade.glb",
+  atlas_c1: "/models/skeleton/c1.glb",
 };

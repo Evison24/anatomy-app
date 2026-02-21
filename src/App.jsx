@@ -110,6 +110,21 @@ export default function App() {
         </div>
       </div>
 
+      {/* ===== UNDER CONSTRUCTION BANNER ===== */}
+      <div
+        style={{
+          background: "#fbbf24",
+          color: "#92400e",
+          textAlign: "center",
+          padding: "10px",
+          fontWeight: "bold",
+          fontSize: "16px",
+        }}
+      >
+        🚧 Kjo faqe është në ndërtim. Disa funksionalitete mund të jenë të
+        paplota ose të ndryshojnë gjatë përditësimeve të ardhshme.
+      </div>
+
       {/* ===== MAIN CONTENT ===== */}
       <div style={{ flex: 1 }}>
         {isSplit ? (
