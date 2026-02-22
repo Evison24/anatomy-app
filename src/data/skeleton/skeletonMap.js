@@ -9,7 +9,7 @@ export const skeletonMap = {
   Object_11: "skull",
   Object_12: "pelvis",
   Object_13: "femur",
-  Object_14: "atlas_c1",
+  Object_3: "atlas_c1",
   Object_16: "sternum",
   Object_17: "hand",
   Object_18: "radius",

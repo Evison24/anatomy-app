@@ -75,7 +75,7 @@ export default function Organs({ onSelect }) {
   return (
     <primitive
       object={scene}
-      scale={1.2}
+      scale={5.5}
       position={[0, 1, 0]}
       onPointerOver={handlePointerOver}
       onPointerOut={handlePointerOut}

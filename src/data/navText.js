@@ -1,5 +1,6 @@
 export const navText = {
   en: {
+    home: "Home",
     skeleton: "Skeleton",
     muscles: "Muscles",
     organs: "Organs",
@@ -7,6 +8,7 @@ export const navText = {
     nervous: "Brain & Nerves",
   },
   sq: {
+    home: "Kreu",
     skeleton: "Skeleti",
     muscles: "Muskujt",
     organs: "Organet",

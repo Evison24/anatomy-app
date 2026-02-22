@@ -599,4 +599,134 @@ export const organsData = {
       ],
     },
   },
+
+  kidney: {
+    en: {
+      name: "Kidney",
+      overview:
+        "The kidneys are paired organs responsible for filtering blood, removing waste, and regulating fluid and electrolyte balance.",
+
+      structure: [
+        {
+          name: "Renal cortex",
+          description:
+            "The outer layer of the kidney where blood filtration begins.",
+        },
+        {
+          name: "Renal medulla",
+          description:
+            "The inner region that concentrates urine and transports it to the renal pelvis.",
+        },
+        {
+          name: "Renal pelvis",
+          description:
+            "A funnel-shaped structure that collects urine and directs it to the ureter.",
+        },
+        {
+          name: "Nephrons",
+          description:
+            "Microscopic functional units that filter blood and form urine.",
+        },
+      ],
+
+      function: [
+        "Filters waste products from the blood",
+        "Regulates fluid and electrolyte balance",
+        "Maintains blood pressure",
+        "Produces hormones involved in red blood cell production",
+      ],
+
+      location:
+        "Located in the back of the abdominal cavity, on either side of the spine.",
+
+      importance:
+        "The kidneys are essential for removing toxins and maintaining internal balance. Kidney failure can be life-threatening.",
+
+      diseases: [
+        {
+          name: "Kidney Stones",
+          description:
+            "Hard mineral deposits that form inside the kidneys and can cause severe pain.",
+
+          causes: [
+            "Dehydration",
+            "High mineral concentration",
+            "Dietary factors",
+          ],
+          symptoms: ["Severe back pain", "Painful urination", "Blood in urine"],
+          treatment:
+            "Increased fluid intake, pain management, or medical procedures to remove stones.",
+
+          interesting_fact:
+            "Each kidney contains about one million nephrons that filter blood continuously.",
+        },
+      ],
+    },
+
+    sq: {
+      name: "Veshka",
+      overview:
+        "Veshkat janë organe çift që filtrojnë gjakun, largojnë mbetjet dhe rregullojnë ekuilibrin e lëngjeve dhe elektroliteve.",
+
+      structure: [
+        {
+          name: "Korteksi renal",
+          description:
+            "Shtresa e jashtme e veshkës ku fillon filtrimi i gjakut.",
+        },
+        {
+          name: "Medula renale",
+          description:
+            "Pjesa e brendshme që përqendron urinën dhe e drejton atë drejt pelvisit renal.",
+        },
+        {
+          name: "Pelvisi renal",
+          description:
+            "Strukturë në formë hinke që mbledh urinën dhe e dërgon në ureter.",
+        },
+        {
+          name: "Nefronet",
+          description:
+            "Njësi mikroskopike funksionale që filtrojnë gjakun dhe formojnë urinën.",
+        },
+      ],
+
+      function: [
+        "Filtron mbetjet nga gjaku",
+        "Rregullon ekuilibrin e lëngjeve dhe elektroliteve",
+        "Ruan presionin e gjakut",
+        "Prodhon hormone për formimin e qelizave të kuqe të gjakut",
+      ],
+
+      location:
+        "Ndodhen në pjesën e pasme të barkut, në të dy anët e shtyllës kurrizore.",
+
+      importance:
+        "Veshkat janë thelbësore për pastrimin e trupit dhe ruajtjen e ekuilibrit të brendshëm.",
+
+      diseases: [
+        {
+          name: "Gurë në Veshka",
+          description:
+            "Depozita të forta minerale që formohen në veshka dhe shkaktojnë dhimbje të forta.",
+
+          causes: [
+            "Dehidratim",
+            "Përqendrim i lartë mineralesh",
+            "Faktorë ushqimorë",
+          ],
+          symptoms: [
+            "Dhimbje e fortë shpine",
+            "Urinim i dhimbshëm",
+            "Gjak në urinë",
+          ],
+          treatment:
+            "Rritje e marrjes së lëngjeve, qetësues dhimbjeje ose ndërhyrje mjekësore.",
+
+          interesting_fact:
+            "Çdo veshkë përmban rreth një milion nefrone që filtrojnë vazhdimisht gjakun.",
+        },
+      ],
+    },
+  },
 };

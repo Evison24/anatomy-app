@@ -7,8 +7,18 @@ import { organsMap } from "./organs/organsMap";
 import Muscles from "../models/Muscles";
 import Circulatory from "../models/Circulatory";
 import Nervous from "../models/Nervous";
+import Home from "../components/Home";
 
 export const anatomySystems = {
+  home: {
+    component: Home,
+    layout: "canvas-only",
+    camera: {
+      position: [0, 0, 0],
+      target: [0, 0, 0],
+      fov: 45,
+    },
+  },
   skeleton: {
     component: Skeleton,
     map: skeletonMap,

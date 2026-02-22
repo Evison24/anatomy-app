@@ -11,9 +11,10 @@ import { anatomySystems } from "./data/anatomySystems";
 import { navText } from "./data/navText";
 
 export default function App() {
-  const [view, setView] = useState("skeleton");
+  const [view, setView] = useState("home");
   const [selectedPart, setSelectedPart] = useState(null);
   const [lang, setLang] = useState("en");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const t = navText[lang];
 
@@ -36,71 +37,136 @@ export default function App() {
       {/* ===== TOP NAVBAR ===== */}
       <div
         style={{
-          height: 70,
+          height: isMobile ? "auto" : 70,
           background: "#0b1220",
           borderBottom: "1px solid rgba(255,255,255,0.08)",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          padding: "0 20px",
+          padding: isMobile ? "10px 15px" : "0 20px",
           flexShrink: 0,
+          flexWrap: isMobile ? "wrap" : "nowrap",
+          gap: isMobile ? 10 : 20,
         }}
       >
-        {/* LEFT — NAV TABS */}
-        <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-          <TabButton
-            active={view === "skeleton"}
-            onClick={() => {
-              setView("skeleton");
-              setSelectedPart(null);
-            }}
-          >
-            {t.skeleton}
-          </TabButton>
+        {/* LOGO */}
+        <img
+          src={"../src/assets/school_logo.jfif"}
+          alt="Anatomy App Logo"
+          style={{
+            height: isMobile ? 40 : 50,
+            cursor: "pointer",
+            flexShrink: 0,
+          }}
+        />
 
-          <TabButton
-            active={view === "muscles"}
-            onClick={() => {
-              setView("muscles");
-              setSelectedPart(null);
+        {/* HAMBURGER MENU FOR MOBILE */}
+        {isMobile && (
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            style={{
+              background: "none",
+              border: "none",
+              color: "#e5e7eb",
+              fontSize: 24,
+              cursor: "pointer",
+              padding: 0,
+              marginLeft: "auto",
             }}
           >
-            {t.muscles}
-          </TabButton>
+            ☰
+          </button>
+        )}
 
-          <TabButton
-            active={view === "organs"}
-            onClick={() => {
-              setView("organs");
-              setSelectedPart(null);
+        {/* NAV TABS — HIDDEN ON MOBILE UNLESS MENU OPEN */}
+        {(!isMobile || mobileMenuOpen) && (
+          <div
+            style={{
+              display: "flex",
+              gap: isMobile ? 8 : 10,
+              flexWrap: "wrap",
+              width: isMobile ? "100%" : "auto",
+              order: isMobile ? 3 : 0,
             }}
           >
-            {t.organs}
-          </TabButton>
+            <TabButton
+              active={view === "home"}
+              onClick={() => {
+                setView("home");
+                setSelectedPart(null);
+                setMobileMenuOpen(false);
+              }}
+              isMobile={isMobile}
+            >
+              {t.home}
+            </TabButton>
 
-          <TabButton
-            active={view === "circulatory"}
-            onClick={() => {
-              setView("circulatory");
-              setSelectedPart(null);
-            }}
-          >
-            {t.circulatory}
-          </TabButton>
+            <TabButton
+              active={view === "skeleton"}
+              onClick={() => {
+                setView("skeleton");
+                setSelectedPart(null);
+                setMobileMenuOpen(false);
+              }}
+              isMobile={isMobile}
+            >
+              {t.skeleton}
+            </TabButton>
 
-          <TabButton
-            active={view === "nervous"}
-            onClick={() => {
-              setView("nervous");
-              setSelectedPart(null);
-            }}
-          >
-            {t.nervous}
-          </TabButton>
-        </div>
+            <TabButton
+              active={view === "muscles"}
+              onClick={() => {
+                setView("muscles");
+                setSelectedPart(null);
+                setMobileMenuOpen(false);
+              }}
+              isMobile={isMobile}
+            >
+              {t.muscles}
+            </TabButton>
+
+            <TabButton
+              active={view === "organs"}
+              onClick={() => {
+                setView("organs");
+                setSelectedPart(null);
+                setMobileMenuOpen(false);
+              }}
+              isMobile={isMobile}
+            >
+              {t.organs}
+            </TabButton>
+
+            <TabButton
+              active={view === "circulatory"}
+              onClick={() => {
+                setView("circulatory");
+                setSelectedPart(null);
+                setMobileMenuOpen(false);
+              }}
+              isMobile={isMobile}
+            >
+              {t.circulatory}
+            </TabButton>
+
+            <TabButton
+              active={view === "nervous"}
+              onClick={() => {
+                setView("nervous");
+                setSelectedPart(null);
+                setMobileMenuOpen(false);
+              }}
+              isMobile={isMobile}
+            >
+              {t.nervous}
+            </TabButton>
+          </div>
+        )}
 
         {/* RIGHT — LANGUAGE */}
-        <div style={{ display: "flex", gap: 8 }}>
+        <div
+          style={{ display: "flex", gap: 8, marginLeft: isMobile ? "auto" : 0 }}
+        >
           <LangButton active={lang === "en"} onClick={() => setLang("en")}>
             EN
           </LangButton>
@@ -127,7 +193,9 @@ export default function App() {
 
       {/* ===== MAIN CONTENT ===== */}
       <div style={{ flex: 1 }}>
-        {isSplit ? (
+        {view === "home" ? (
+          <ActiveSystem />
+        ) : isSplit ? (
           <div
             style={{
               height: "100%",
@@ -213,20 +281,21 @@ function SceneLights() {
 
 /* ===== UI ===== */
 
-function TabButton({ active, children, ...props }) {
+function TabButton({ active, children, isMobile, ...props }) {
   return (
     <button
       {...props}
       style={{
-        padding: "8px 14px",
+        padding: isMobile ? "6px 10px" : "8px 14px",
         borderRadius: 8,
         border: "none",
-        fontSize: 13,
+        fontSize: isMobile ? 11 : 13,
         fontWeight: 600,
         cursor: "pointer",
         background: active ? "#2563eb" : "#e5e7eb",
         color: active ? "white" : "#1f2937",
         boxShadow: active ? "0 4px 10px rgba(37,99,235,0.25)" : "none",
+        whiteSpace: "nowrap",
       }}
     >
       {children}
@@ -235,15 +304,17 @@ function TabButton({ active, children, ...props }) {
 }
 
 function LangButton({ active, children, ...props }) {
+  const isMobile = window.innerWidth < 768;
   return (
     <button
       {...props}
       style={{
-        width: 38,
-        height: 38,
+        width: isMobile ? 32 : 38,
+        height: isMobile ? 32 : 38,
         borderRadius: "50%",
         border: "none",
         fontWeight: 700,
+        fontSize: isMobile ? 10 : 12,
         cursor: "pointer",
         background: active ? "#2563eb" : "#e5e7eb",
         color: active ? "white" : "#111827",
@@ -251,6 +322,7 @@ function LangButton({ active, children, ...props }) {
         justifyContent: "center",
         alignItems: "center",
         boxShadow: active ? "0 4px 10px rgba(17,24,39,0.25)" : "none",
+        flexShrink: 0,
       }}
     >
       {children}
