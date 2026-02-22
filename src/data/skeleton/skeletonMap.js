@@ -6,6 +6,7 @@ export const skeletonMap = {
   Object_8: "foot",
   Object_9: "humerus",
   Object_10: "ulna",
+  Object_11: "skull",
   Object_12: "pelvis",
   Object_13: "femur",
   Object_14: "atlas_c1",
@@ -13,5 +14,6 @@ export const skeletonMap = {
   Object_17: "hand",
   Object_18: "radius",
   Object_19: "clavicle",
+  Object_20: "patella",
   Object_21: "fibula",
 };

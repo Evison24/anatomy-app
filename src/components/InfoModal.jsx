@@ -2,16 +2,17 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { uiText } from "../data/i18n";
 import { useGLTF } from "@react-three/drei";
-import { partModels } from "../data/skeleton/partModals";
+import { skeletonPartModels } from "../data/skeleton/skeletonPartModels";
+import { organsPartModels } from "../data/organs/organsPartModels";
 
 export default function InfoModal({ data, mesh, onClose, lang, partKey }) {
   const t = data?.[lang];
   const ui = uiText[lang];
   const isMobile = window.innerWidth < 768;
 
-  function PartModel({ url }) {
+  function PartModel({ url, scale = 0.4 }) {
     const { scene } = useGLTF(url);
-    return <primitive object={scene} scale={0.4} />;
+    return <primitive object={scene} scale={scale} />;
   }
 
   if (!t) {
@@ -33,8 +34,10 @@ export default function InfoModal({ data, mesh, onClose, lang, partKey }) {
           <Canvas camera={{ position: [3, 0, 3] }}>
             <ambientLight intensity={1} />
             <directionalLight position={[5, 5, 5]} intensity={1.2} />
-            {partModels[partKey] ? (
-              <PartModel url={partModels[partKey]} />
+            {skeletonPartModels[partKey] ? (
+              <PartModel url={skeletonPartModels[partKey]} />
+            ) : organsPartModels[partKey] ? (
+              <PartModel url={organsPartModels[partKey]} scale={1.9} />
             ) : (
               <primitive object={mesh.clone()} scale={1.4} />
             )}
@@ -47,6 +50,18 @@ export default function InfoModal({ data, mesh, onClose, lang, partKey }) {
         <div style={contentStyle}>
           <h2 style={titleStyle}>{t.name}</h2>
           <p style={paragraphStyle}>{t.overview}</p>
+
+          {t.structure && (
+            <Section title={ui.structure}>
+              <ul>
+                {t.structure.map((s) => (
+                  <li key={s.name}>
+                    <b>{s.name}:</b> {s.description}
+                  </li>
+                ))}
+              </ul>
+            </Section>
+          )}
 
           <Section title={ui.function}>
             <ul>
@@ -78,6 +93,11 @@ export default function InfoModal({ data, mesh, onClose, lang, partKey }) {
                 <p>
                   <b>{ui.treatment}:</b> {d.treatment}
                 </p>
+                {d.interesting_fact && (
+                  <p>
+                    <b>{ui.interesting_fact}:</b> {d.interesting_fact}
+                  </p>
+                )}
               </div>
             ))}
           </Section>

@@ -10,13 +10,12 @@ export default function Organs({ onSelect }) {
 
     scene.traverse((child) => {
       if (child.isMesh) {
-        // assign stable index
+        // assign stable index for mapping
         child.userData.meshIndex = index;
         index++;
 
         // clone material so changes are isolated
         child.material = child.material.clone();
-
         child.userData.originalColor = child.material.color?.clone?.() || null;
       }
     });
@@ -42,8 +41,6 @@ export default function Organs({ onSelect }) {
       e.object.material.opacity = 1;
       e.object.material.color.set("#22c55e"); // green
     }
-
-    console.log("Hovered organ mesh index:", e.object.userData.meshIndex);
   };
 
   const handlePointerOut = (e) => {

@@ -245,8 +245,12 @@ function LangButton({ active, children, ...props }) {
         border: "none",
         fontWeight: 700,
         cursor: "pointer",
-        background: active ? "#111827" : "#e5e7eb",
+        background: active ? "#2563eb" : "#e5e7eb",
         color: active ? "white" : "#111827",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        boxShadow: active ? "0 4px 10px rgba(17,24,39,0.25)" : "none",
       }}
     >
       {children}

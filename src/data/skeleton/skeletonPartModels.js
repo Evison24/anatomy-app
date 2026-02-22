@@ -1,4 +1,4 @@
-export const partModels = {
+export const skeletonPartModels = {
   skull: "/models/skeleton/skull.glb",
   foot: "/models/skeleton/foot.glb",
   femur: "/models/skeleton/femur.glb",
@@ -15,4 +15,5 @@ export const partModels = {
   clavicle: "/models/skeleton/collar_bone.glb",
   scapula: "/models/skeleton/shoulder_blade.glb",
   atlas_c1: "/models/skeleton/c1.glb",
+  patella: "/models/skeleton/patella.glb",
 };

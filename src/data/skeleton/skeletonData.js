@@ -1035,4 +1035,71 @@ export const skeletonData = {
       ],
     },
   },
+
+  patella: {
+    en: {
+      name: "Patella (Kneecap)",
+      overview:
+        "The patella is a small, flat bone located in front of the knee joint that protects the knee and improves leg movement.",
+
+      function: [
+        "Protects the knee joint",
+        "Improves leverage of the thigh muscles",
+        "Assists in knee extension",
+      ],
+
+      location:
+        "Located at the front of the knee joint, between the femur and tibia.",
+
+      importance:
+        "The patella is essential for efficient knee movement and protecting the joint during motion.",
+
+      diseases: [
+        {
+          name: "Patellar Fracture",
+          description:
+            "A break in the patella, usually caused by direct trauma to the knee.",
+
+          causes: ["Falls", "Direct impact", "Sports injuries"],
+          symptoms: [
+            "Knee pain",
+            "Swelling",
+            "Difficulty straightening the leg",
+          ],
+          treatment:
+            "Immobilization or surgery depending on fracture severity, followed by rehabilitation.",
+        },
+      ],
+    },
+
+    sq: {
+      name: "Patela (Kapaku i Gjurit)",
+      overview:
+        "Patela është një kockë e vogël dhe e sheshtë që ndodhet përpara nyjes së gjurit dhe mbron atë.",
+
+      function: [
+        "Mbron nyjen e gjurit",
+        "Rrit forcën e muskujve të kofshës",
+        "Ndihmon në shtrirjen e gjurit",
+      ],
+
+      location:
+        "Ndodhet në pjesën e përparme të gjurit, midis femurit dhe tibisë.",
+
+      importance:
+        "Patela është thelbësore për lëvizjen efikase dhe mbrojtjen e gjurit.",
+
+      diseases: [
+        {
+          name: "Fraktura e Patelës",
+          description:
+            "Thyerje e patelës e shkaktuar nga goditje direkte në gju.",
+
+          causes: ["Rrëzime", "Goditje direkte", "Sport"],
+          symptoms: ["Dhimbje gjuri", "Ënjtje", "Vështirësi në shtrirje"],
+          treatment: "Imobilizim ose kirurgji, e ndjekur nga rehabilitimi.",
+        },
+      ],
+    },
+  },
 };
