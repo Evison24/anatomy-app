@@ -5,6 +5,6 @@ export const organsPartModels = {
   //   liver: "/models/organs/liver.glb",
   large_intestine: "/models/organs/large_intestine.glb",
   heart: "/models/organs/heart.glb",
-  //   kidney: "/models/organs/kidney.glb",
+  kidney: "/models/organs/kidney.glb",
   brain: "/models/organs/brain.glb",
 };
