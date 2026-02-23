@@ -9,7 +9,7 @@ export default function Home() {
         justifyContent: "center",
         padding: "20px 20px",
         background: "#020617",
-        backgroundImage: "url(/src/assets/background.jfif)",
+        backgroundImage: "url(/src/assets/background.jpg)",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
