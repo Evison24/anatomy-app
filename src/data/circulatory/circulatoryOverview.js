@@ -2,15 +2,15 @@ export const circulatoryOverview = {
   en: {
     title: "Circulatory System",
     description:
-      "The circulatory system is responsible for transporting blood, oxygen, nutrients, hormones, and waste products throughout the body. It plays a critical role in maintaining homeostasis, supporting immune function, and regulating body temperature.",
+      "The circulatory system (Systema cardiovasculare) is a vital biological network responsible for transporting blood throughout the body. It delivers oxygen and nutrients to cells, removes carbon dioxide and metabolic waste, regulates body temperature, and maintains homeostasis. The system consists of the heart, blood vessels, and blood.",
 
     sections: [
       {
         title: "Overview of the Circulatory System",
-        info: "The circulatory system consists of the heart, blood, and blood vessels. It works continuously to ensure that every cell in the body receives oxygen and nutrients while removing waste products.",
+        info: "The circulatory system operates as a closed-loop transport system ensuring continuous blood flow to all tissues and organs.",
         points: [
-          "Operates through a closed-loop system",
-          "Essential for survival",
+          "Transports oxygen, nutrients, hormones, and waste",
+          "Essential for homeostasis and survival",
           "Works closely with the respiratory and digestive systems",
         ],
         diseases: ["Cardiovascular disease", "Shock", "Sepsis"],
@@ -18,12 +18,12 @@ export const circulatoryOverview = {
 
       {
         title: "The Heart",
-        info: "The heart is a muscular organ that acts as a pump to move blood throughout the body. It has four chambers: two atria and two ventricles.",
+        info: "The heart is a hollow muscular organ located in the mediastinum that functions as a dual pump for pulmonary and systemic circulation.",
         points: [
-          "Beats approximately 100,000 times per day",
-          "Pumps about 7,500 liters of blood daily",
+          "Contains four chambers: two atria and two ventricles",
           "Right side pumps blood to the lungs",
-          "Left side pumps blood to the rest of the body",
+          "Left side pumps blood to the entire body",
+          "Beats approximately 60–100 times per minute at rest",
         ],
         diseases: [
           "Coronary artery disease",
@@ -35,20 +35,20 @@ export const circulatoryOverview = {
 
       {
         title: "Blood Vessels",
-        info: "Blood vessels form a vast network of tubes that transport blood throughout the body.",
+        info: "Blood vessels form an extensive network that transports blood throughout the body.",
         points: [
-          "Over 100,000 km of blood vessels in the human body",
+          "Total vessel length exceeds 100,000 km",
           "Three main types: arteries, veins, and capillaries",
         ],
       },
 
       {
         title: "Arteries",
-        info: "Arteries carry oxygen-rich blood away from the heart under high pressure.",
+        info: "Arteries carry blood away from the heart under high pressure, usually rich in oxygen.",
         points: [
-          "Have thick, elastic walls",
-          "Can withstand high blood pressure",
-          "Pulse can be felt in major arteries",
+          "Thick, elastic muscular walls",
+          "Withstand high arterial pressure",
+          "Largest artery is the aorta",
         ],
         diseases: [
           "Atherosclerosis",
@@ -60,10 +60,10 @@ export const circulatoryOverview = {
 
       {
         title: "Veins",
-        info: "Veins return oxygen-poor blood back to the heart.",
+        info: "Veins return blood toward the heart, usually carrying deoxygenated blood.",
         points: [
           "Contain valves to prevent backflow",
-          "Rely on muscle movement to push blood upward",
+          "Depend on skeletal muscle contraction",
         ],
         diseases: [
           "Varicose veins",
@@ -74,147 +74,63 @@ export const circulatoryOverview = {
 
       {
         title: "Capillaries",
-        info: "Capillaries are the smallest blood vessels and are the site of exchange between blood and tissues.",
+        info: "Capillaries are microscopic vessels where gas, nutrient, and waste exchange occurs.",
         points: [
-          "Walls are only one cell thick",
-          "Allow oxygen, nutrients, and waste exchange",
-          "Connect arteries and veins",
+          "Walls one cell thick",
+          "Enable diffusion of oxygen and nutrients",
+          "Connect arterioles and venules",
         ],
         diseases: ["Capillary leak syndrome", "Microvascular disease"],
       },
 
       {
         title: "Blood",
-        info: "Blood is a specialized fluid that transports substances and protects the body.",
+        info: "Blood is a specialized connective tissue that transports substances and supports immunity.",
         points: [
-          "Composed of plasma, red blood cells, white blood cells, and platelets",
-          "Transports oxygen and nutrients",
-          "Plays a role in immune defense",
+          "Composed of plasma, erythrocytes, leukocytes, and platelets",
+          "Hemoglobin binds and transports oxygen",
+          "Platelets are essential for clotting",
         ],
-        diseases: ["Anemia", "Leukemia", "Blood clotting disorders"],
+        diseases: ["Anemia", "Leukemia", "Coagulation disorders"],
       },
 
       {
-        title: "Circulatory System and Oxygen Transport",
-        info: "The circulatory and respiratory systems work together to supply oxygen to the body.",
+        title: "Pulmonary Circulation",
+        info: "Pulmonary circulation transports deoxygenated blood from the heart to the lungs and returns oxygenated blood to the heart.",
         points: [
-          "Oxygen enters blood through the lungs",
-          "Red blood cells transport oxygen via hemoglobin",
-          "Carbon dioxide is removed through exhalation",
-        ],
-      },
-
-      {
-        title: "Regulation and Homeostasis",
-        info: "The circulatory system helps regulate body temperature, pH levels, and fluid balance.",
-        points: [
-          "Blood vessels expand or contract to control heat loss",
-          "Maintains blood pressure",
-          "Supports organ function",
+          "Right ventricle pumps blood to the lungs",
+          "Gas exchange occurs in alveolar capillaries",
+          "Blood returns to the left atrium via pulmonary veins",
         ],
       },
 
       {
-        title: "Lifestyle and Circulatory Health",
-        info: "Healthy lifestyle choices are essential for maintaining a healthy circulatory system.",
+        title: "Systemic Circulation",
+        info: "Systemic circulation delivers oxygenated blood to all body tissues.",
         points: [
-          "Regular physical activity",
-          "Balanced diet",
-          "Avoiding smoking",
-          "Managing stress",
-        ],
-        diseases: ["Cardiovascular disease", "Stroke"],
-      },
-
-      {
-        title: "Detailed Blood Flow Through the Heart",
-        info: "The heart functions as a double pump, ensuring continuous circulation of blood through two main pathways: pulmonary circulation and systemic circulation.",
-        points: [
-          "The right side of the heart handles deoxygenated blood",
-          "The left side of the heart handles oxygenated blood",
-          "Blood flows in one direction due to valves",
-        ],
-      },
-
-      {
-        title: "Heart Chambers (Rooms of the Heart)",
-        info: "The heart has four chambers that work together to move blood efficiently.",
-        points: [
-          "Right atrium: receives deoxygenated blood from the body",
-          "Right ventricle: pumps blood to the lungs",
-          "Left atrium: receives oxygenated blood from the lungs",
-          "Left ventricle: pumps oxygenated blood to the entire body",
-        ],
-      },
-
-      {
-        title: "Heart Valves and Their Role",
-        info: "Heart valves ensure that blood flows in only one direction through the heart.",
-        points: [
-          "Tricuspid valve: between right atrium and right ventricle",
-          "Pulmonary valve: between right ventricle and pulmonary artery",
-          "Mitral (bicuspid) valve: between left atrium and left ventricle",
-          "Aortic valve: between left ventricle and aorta",
-        ],
-        diseases: ["Valve stenosis", "Valve regurgitation"],
-      },
-
-      {
-        title: "Pulmonary Circulation (Heart → Lungs → Heart)",
-        info: "Pulmonary circulation carries deoxygenated blood from the heart to the lungs and returns oxygenated blood back to the heart.",
-        points: [
-          "Blood enters the right atrium via the superior and inferior vena cava",
-          "Blood flows to the right ventricle",
-          "Right ventricle pumps blood through the pulmonary artery",
-          "Blood reaches the lungs and releases carbon dioxide",
-          "Blood receives oxygen in the alveoli",
-          "Oxygenated blood returns to the left atrium via pulmonary veins",
-        ],
-      },
-
-      {
-        title: "Systemic Circulation (Heart → Body → Heart)",
-        info: "Systemic circulation delivers oxygen-rich blood from the heart to the entire body.",
-        points: [
-          "Blood flows from left atrium to left ventricle",
           "Left ventricle pumps blood into the aorta",
-          "Blood travels through arteries to organs and tissues",
-          "Capillaries allow oxygen and nutrients to enter cells",
-          "Blood becomes deoxygenated",
-          "Veins return blood back to the right atrium",
-        ],
-      },
-
-      {
-        title: "Oxygenated vs Deoxygenated Blood",
-        info: "Blood changes its oxygen content as it moves through the body.",
-        points: [
-          "Oxygenated blood is rich in oxygen and appears bright red",
-          "Deoxygenated blood contains carbon dioxide and appears darker",
-          "Arteries usually carry oxygenated blood",
-          "Veins usually carry deoxygenated blood",
+          "Arteries distribute blood to tissues",
+          "Veins return blood to the right atrium",
         ],
       },
 
       {
         title: "The Cardiac Cycle",
-        info: "The cardiac cycle refers to the sequence of events that occur during one heartbeat.",
+        info: "The cardiac cycle represents one complete heartbeat consisting of contraction and relaxation phases.",
         points: [
-          "Diastole: heart muscles relax and chambers fill with blood",
-          "Systole: ventricles contract and pump blood out",
-          "Valves open and close in coordination with pressure changes",
-          "This cycle repeats approximately 60–100 times per minute",
+          "Systole: ventricular contraction",
+          "Diastole: ventricular relaxation",
+          "Controlled by the sinoatrial node (natural pacemaker)",
         ],
       },
 
       {
-        title: "Blood Circulation Through the Entire Body",
-        info: "Blood circulation ensures that all body cells receive oxygen and nutrients.",
+        title: "Regulation and Homeostasis",
+        info: "Circulatory activity is regulated by neural and hormonal mechanisms.",
         points: [
-          "Arteries deliver oxygen and nutrients to tissues",
-          "Capillaries allow exchange with cells",
-          "Veins return waste-filled blood to the heart",
-          "The process is continuous and uninterrupted throughout life",
+          "Autonomic nervous system control",
+          "Hormonal regulation (adrenaline)",
+          "Renin–angiotensin–aldosterone system",
         ],
       },
     ],
@@ -223,32 +139,32 @@ export const circulatoryOverview = {
   sq: {
     title: "Sistemi i Qarkullimit të Gjakut",
     description:
-      "Sistemi i qarkullimit të gjakut është përgjegjës për transportimin e gjakut, oksigjenit, lëndëve ushqyese, hormoneve dhe mbeturinave në të gjithë trupin. Ai luan një rol jetik në ruajtjen e ekuilibrit të trupit dhe funksioneve jetësore.",
+      "Sistemi i qarkullimit të gjakut (Systema cardiovasculare) është një rrjet jetik që siguron transportin e gjakut në të gjithë organizmin. Ai furnizon qelizat me oksigjen dhe lëndë ushqyese, largon dioksidin e karbonit dhe mbetjet metabolike, rregullon temperaturën dhe ruan homeostazën.",
 
     sections: [
       {
         title: "Përmbledhje e Sistemit të Qarkullimit",
-        info: "Sistemi përbëhet nga zemra, gjaku dhe enët e gjakut. Ai funksionon vazhdimisht për të mbajtur gjallë çdo qelizë.",
+        info: "Sistemi i qarkullimit funksionon si një sistem i mbyllur që siguron qarkullim të vazhdueshëm të gjakut.",
         points: [
-          "Sistem qarkullues i mbyllur",
+          "Transporton oksigjen, hormone dhe lëndë ushqyese",
           "Jetik për mbijetesë",
-          "Punon me sistemin e frymëmarrjes",
+          "Bashkëvepron me sistemin e frymëmarrjes dhe tretjes",
         ],
         diseases: ["Sëmundje kardiovaskulare", "Shok", "Sepsë"],
       },
 
       {
         title: "Zemra",
-        info: "Zemra është një organ muskulor që pompon gjakun në trup. Ajo ka katër dhoma.",
+        info: "Zemra është organ muskulor i zbrazët që vepron si pompë për qarkullimin pulmonar dhe sistemik.",
         points: [
-          "Rreh rreth 100,000 herë në ditë",
-          "Pompon mijëra litra gjak çdo ditë",
+          "Përbëhet nga katër dhoma",
           "Ana e djathtë dërgon gjak në mushkëri",
           "Ana e majtë dërgon gjak në trup",
+          "Rreh 60–100 herë në minutë në pushim",
         ],
         diseases: [
           "Sëmundje koronare",
-          "Dështim i zemrës",
+          "Insuficiencë kardiake",
           "Aritmi",
           "Kardiomiopati",
         ],
@@ -256,95 +172,52 @@ export const circulatoryOverview = {
 
       {
         title: "Enët e Gjakut",
-        info: "Enët e gjakut formojnë një rrjet shumë të madh në trup.",
+        info: "Enët e gjakut përbëjnë një rrjet shumë të gjerë transportues.",
         points: ["Mbi 100,000 km enë gjaku", "Arterie, vena dhe kapilarë"],
       },
 
       {
         title: "Arteriet",
-        info: "Arteriet transportojnë gjak të pasur me oksigjen nga zemra.",
-        points: ["Mure të trasha dhe elastike", "Presion i lartë"],
+        info: "Arteriet çojnë gjakun nga zemra drejt indeve nën presion të lartë.",
+        points: ["Mure të trasha dhe elastike", "Përballojnë presion të lartë"],
         diseases: ["Ateroskleroza", "Hipertensioni", "Aneurizma"],
       },
 
       {
         title: "Venat",
-        info: "Venat rikthejnë gjakun pa oksigjen drejt zemrës.",
-        points: ["Kanë valvula mbrojtëse", "Punojnë me lëvizjen e muskujve"],
+        info: "Venat rikthejnë gjakun drejt zemrës.",
+        points: [
+          "Kanë valvula kundër rikthimit",
+          "Ndihmohen nga kontraktimet muskulore",
+        ],
         diseases: ["Venat varikoze", "Tromboza"],
       },
 
       {
         title: "Kapilarët",
-        info: "Kapilarët janë enët më të vogla të gjakut.",
-        points: ["Mure shumë të holla", "Shkëmbim oksigjeni dhe lëndësh"],
+        info: "Kapilarët janë enët më të vogla ku ndodh shkëmbimi i gazeve.",
+        points: ["Mure shumë të holla", "Shkëmbim përmes difuzionit"],
         diseases: ["Sëmundje mikrovaskulare"],
       },
 
       {
         title: "Gjaku",
-        info: "Gjaku është një lëng jetik që transporton substanca dhe mbron trupin.",
+        info: "Gjaku është ind lidhës i lëngshëm me funksion transportues dhe mbrojtës.",
         points: [
           "Përbëhet nga plazma dhe qeliza",
-          "Mbështet sistemin imunitar",
+          "Hemoglobina lidh oksigjenin",
+          "Trombocitet marrin pjesë në koagulim",
         ],
         diseases: ["Anemia", "Leuçemia"],
       },
 
       {
-        title: "Shëndeti i Sistemit të Qarkullimit",
-        info: "Stili i jetesës ka ndikim të madh në shëndetin e zemrës dhe enëve të gjakut.",
-        points: [
-          "Aktivitet fizik",
-          "Ushqyerje e shëndetshme",
-          "Shmangia e duhanit",
-        ],
-        diseases: ["Goditje në tru", "Sëmundje të zemrës"],
-      },
-
-      {
-        title: "Qarkullimi i Detajuar i Gjakut në Zemër",
-        info: "Zemra funksionon si një pompë e dyfishtë që siguron qarkullimin e vazhdueshëm të gjakut.",
-        points: [
-          "Ana e djathtë e zemrës trajton gjakun pa oksigjen",
-          "Ana e majtë trajton gjakun me oksigjen",
-          "Valvulat sigurojnë qarkullim njëdrejtimësh",
-        ],
-      },
-
-      {
-        title: "Dhomat e Zemrës",
-        info: "Zemra përbëhet nga katër dhoma që punojnë së bashku.",
-        points: [
-          "Atriumi i djathtë: merr gjak pa oksigjen nga trupi",
-          "Ventrikuli i djathtë: dërgon gjakun në mushkëri",
-          "Atriumi i majtë: merr gjak të oksigjenuar nga mushkëritë",
-          "Ventrikuli i majtë: pompon gjakun në të gjithë trupin",
-        ],
-      },
-
-      {
-        title: "Valvulat e Zemrës",
-        info: "Valvulat kontrollojnë drejtimin e rrjedhjes së gjakut.",
-        points: [
-          "Valvula trikuspidale",
-          "Valvula pulmonare",
-          "Valvula mitrale",
-          "Valvula aortale",
-        ],
-        diseases: ["Ngushtimi i valvulave", "Rikthimi i gjakut"],
-      },
-
-      {
         title: "Qarkullimi Pulmonar",
-        info: "Qarkullimi pulmonar çon gjakun nga zemra në mushkëri dhe përsëri.",
+        info: "Qarkullimi pulmonar transporton gjakun pa oksigjen drejt mushkërive.",
         points: [
-          "Gjaku hyn në atriumin e djathtë",
-          "Kalimi në ventrikulin e djathtë",
-          "Pompohet drejt mushkërive",
-          "Largon dioksidin e karbonit",
-          "Merr oksigjen",
-          "Rikthehet në atriumin e majtë",
+          "Ventrikuli i djathtë pompon gjakun",
+          "Shkëmbim gazesh në mushkëri",
+          "Gjaku kthehet i oksigjenuar",
         ],
       },
 
@@ -352,22 +225,9 @@ export const circulatoryOverview = {
         title: "Qarkullimi Sistemik",
         info: "Qarkullimi sistemik furnizon trupin me gjak të oksigjenuar.",
         points: [
-          "Gjaku kalon në ventrikulin e majtë",
-          "Pompohet në aortë",
-          "Shpërndahet në organe",
-          "Kapilarët bëjnë shkëmbimin",
-          "Gjaku kthehet në zemër",
-        ],
-      },
-
-      {
-        title: "Gjaku me dhe pa Oksigjen",
-        info: "Gjaku ndryshon përmbajtjen e oksigjenit gjatë qarkullimit.",
-        points: [
-          "Gjaku me oksigjen është i kuq i ndritshëm",
-          "Gjaku pa oksigjen është më i errët",
-          "Arteriet zakonisht mbajnë gjak me oksigjen",
-          "Venat mbajnë gjak pa oksigjen",
+          "Ventrikuli i majtë pompon gjakun",
+          "Aorta shpërndan gjakun",
+          "Venat rikthejnë gjakun",
         ],
       },
 
@@ -375,19 +235,19 @@ export const circulatoryOverview = {
         title: "Cikli Kardiak",
         info: "Cikli kardiak përfshin një rrahje të plotë të zemrës.",
         points: [
-          "Diastola: mbushja e dhomave",
-          "Sistola: tkurrja dhe pompimi",
-          "Koordinim i valvulave",
+          "Diastola: relaksimi",
+          "Sistola: tkurrja",
+          "Ritmi kontrollohet nga nyja sinoatriale",
         ],
       },
 
       {
-        title: "Qarkullimi i Gjakut në Trup",
-        info: "Qarkullimi i gjakut furnizon çdo qelizë me oksigjen.",
+        title: "Rregullimi dhe Homeostaza",
+        info: "Qarkullimi rregullohet nga mekanizma nervorë dhe hormonalë.",
         points: [
-          "Arteriet dërgojnë oksigjen",
-          "Kapilarët bëjnë shkëmbimin",
-          "Venat rikthejnë gjakun",
+          "Sistemi nervor autonom",
+          "Hormonet (adrenalina)",
+          "Sistemi reninë–angiotensinë–aldosteron",
         ],
       },
     ],

@@ -9,11 +9,12 @@ import NervousInfoPanel from "./components/NervousInfoPanel";
 
 import { anatomySystems } from "./data/anatomySystems";
 import { navText } from "./data/navText";
+import { UnderConstructionBanner } from "./components/UnderConstructionBanner";
 
 export default function App() {
   const [view, setView] = useState("home");
   const [selectedPart, setSelectedPart] = useState(null);
-  const [lang, setLang] = useState("en");
+  const [lang, setLang] = useState("sq");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const t = navText[lang];
@@ -177,19 +178,7 @@ export default function App() {
       </div>
 
       {/* ===== UNDER CONSTRUCTION BANNER ===== */}
-      <div
-        style={{
-          background: "#fbbf24",
-          color: "#92400e",
-          textAlign: "center",
-          padding: "10px",
-          fontWeight: "bold",
-          fontSize: "16px",
-        }}
-      >
-        🚧 Kjo faqe është në ndërtim. Disa funksionalitete mund të jenë të
-        paplota ose të ndryshojnë gjatë përditësimeve të ardhshme.
-      </div>
+      <UnderConstructionBanner />
 
       {/* ===== MAIN CONTENT ===== */}
       <div style={{ flex: 1 }}>
