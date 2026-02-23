@@ -52,7 +52,7 @@ export default function App() {
       >
         {/* LOGO */}
         <img
-          src={"../src/assets/school_logo.jpg"}
+          src={"/images/school_logo.jpg"}
           alt="Anatomy App Logo"
           style={{
             height: isMobile ? 40 : 50,
