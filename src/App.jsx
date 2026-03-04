@@ -9,13 +9,13 @@ import NervousInfoPanel from "./components/NervousInfoPanel";
 
 import { anatomySystems } from "./data/anatomySystems";
 import { navText } from "./data/navText";
-import { UnderConstructionBanner } from "./components/UnderConstructionBanner";
 
 export default function App() {
   const [view, setView] = useState("home");
   const [selectedPart, setSelectedPart] = useState(null);
   const [lang, setLang] = useState("sq");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [infoPanelOpen, setInfoPanelOpen] = useState(false);
 
   const t = navText[lang];
 
@@ -177,9 +177,6 @@ export default function App() {
         </div>
       </div>
 
-      {/* ===== UNDER CONSTRUCTION BANNER ===== */}
-      <UnderConstructionBanner />
-
       {/* ===== MAIN CONTENT ===== */}
       <div style={{ flex: 1, overflow: "hidden" }}>
         {view === "home" ? (
@@ -194,7 +191,7 @@ export default function App() {
             }}
           >
             {/* CANVAS */}
-            <div style={{ flex: 1 }}>
+            <div style={{ flex: 1, position: "relative" }}>
               <Canvas
                 camera={{
                   position: camera.position,
@@ -207,23 +204,109 @@ export default function App() {
                 <ActiveSystem key={view} />
                 <OrbitControls target={camera.target} />
               </Canvas>
+              {isMobile && (
+                <button
+                  onClick={() => setInfoPanelOpen(true)}
+                  style={{
+                    position: "absolute",
+                    bottom: 20,
+                    right: 20,
+                    padding: "10px 16px",
+                    borderRadius: 8,
+                    border: "none",
+                    background: "#2563eb",
+                    color: "white",
+                    fontWeight: 600,
+                    fontSize: 12,
+                    cursor: "pointer",
+                    zIndex: 10,
+                    boxShadow: "0 4px 10px rgba(37,99,235,0.25)",
+                  }}
+                >
+                  📋 Info
+                </button>
+              )}
             </div>
 
-            {/* INFO PANEL */}
-            <div
-              style={{
-                flex: 1,
-                height: "100%",
-                overflow: "hidden",
-                borderLeft: !isMobile
-                  ? "1px solid rgba(255,255,255,0.08)"
-                  : "none",
-              }}
-            >
-              {view === "muscles" && <MuscleInfoPanel lang={lang} />}
-              {view === "circulatory" && <CirculatoryInfoPanel lang={lang} />}
-              {view === "nervous" && <NervousInfoPanel lang={lang} />}
-            </div>
+            {/* INFO PANEL — DESKTOP ONLY */}
+            {!isMobile && (
+              <div
+                style={{
+                  flex: 1,
+                  height: "100%",
+                  overflow: "hidden",
+                  borderLeft: "1px solid rgba(255,255,255,0.08)",
+                }}
+              >
+                {view === "muscles" && <MuscleInfoPanel lang={lang} />}
+                {view === "circulatory" && <CirculatoryInfoPanel lang={lang} />}
+                {view === "nervous" && <NervousInfoPanel lang={lang} />}
+              </div>
+            )}
+
+            {/* INFO PANEL DRAWER — MOBILE ONLY */}
+            {isMobile && infoPanelOpen && (
+              <div
+                style={{
+                  position: "fixed",
+                  inset: 0,
+                  background: "rgba(0,0,0,0.5)",
+                  zIndex: 100,
+                  display: "flex",
+                  alignItems: "flex-end",
+                }}
+                onClick={() => setInfoPanelOpen(false)}
+              >
+                <div
+                  style={{
+                    background: "#020617",
+                    width: "100%",
+                    maxHeight: "80vh",
+                    borderRadius: "12px 12px 0 0",
+                    overflow: "hidden",
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  {/* DRAWER HEADER */}
+                  <div
+                    style={{
+                      padding: "16px 20px",
+                      borderBottom: "1px solid rgba(255,255,255,0.08)",
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                      flexShrink: 0,
+                    }}
+                  >
+                    <h3 style={{ margin: 0, color: "#e5e7eb" }}>Info</h3>
+                    <button
+                      onClick={() => setInfoPanelOpen(false)}
+                      style={{
+                        background: "none",
+                        border: "none",
+                        color: "#e5e7eb",
+                        fontSize: 20,
+                        cursor: "pointer",
+                        padding: 0,
+                      }}
+                    >
+                      ✕
+                    </button>
+                  </div>
+
+                  {/* DRAWER CONTENT */}
+                  <div style={{ flex: 1, overflow: "auto" }}>
+                    {view === "muscles" && <MuscleInfoPanel lang={lang} />}
+                    {view === "circulatory" && (
+                      <CirculatoryInfoPanel lang={lang} />
+                    )}
+                    {view === "nervous" && <NervousInfoPanel lang={lang} />}
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         ) : (
           <Canvas
