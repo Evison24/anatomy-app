@@ -181,7 +181,7 @@ export default function App() {
       <UnderConstructionBanner />
 
       {/* ===== MAIN CONTENT ===== */}
-      <div style={{ flex: 1 }}>
+      <div style={{ flex: 1, overflow: "hidden" }}>
         {view === "home" ? (
           <ActiveSystem />
         ) : isSplit ? (
@@ -190,6 +190,7 @@ export default function App() {
               height: "100%",
               display: "flex",
               flexDirection: isMobile ? "column" : "row",
+              overflow: "hidden",
             }}
           >
             {/* CANVAS */}
@@ -212,7 +213,8 @@ export default function App() {
             <div
               style={{
                 flex: 1,
-                overflowY: "auto",
+                height: "100%",
+                overflow: "hidden",
                 borderLeft: !isMobile
                   ? "1px solid rgba(255,255,255,0.08)"
                   : "none",

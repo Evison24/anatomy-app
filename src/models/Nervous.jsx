@@ -13,7 +13,7 @@ export default function Nervous() {
     });
   }, [scene]);
 
-  return <primitive object={scene} scale={1.15} position={[0, 1.1, 0]} />;
+  return <primitive object={scene} scale={3.5} position={[0, -1.7, 0]} />;
 }
 
 useGLTF.preload("/models/nervous/nervous.glb");

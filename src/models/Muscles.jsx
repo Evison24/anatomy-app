@@ -29,7 +29,7 @@ export default function Muscles() {
   return (
     <primitive
       object={scene}
-      scale={1.2}
+      scale={0.1}
       position={[0, 2, 0]}
       onPointerOver={handlePointerOver}
       onPointerOut={handlePointerOut}
