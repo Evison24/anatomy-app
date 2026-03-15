@@ -1,18 +1,19 @@
-import { circulatoryOverview } from "../data/circulatory/circulatoryOverview";
+import { basicCellOverview } from "../data/basicCell/basicCellOverview";
 import { uiText } from "../data/i18n";
 
-export default function CirculatoryInfoPanel({ lang }) {
+export default function BasicCellInfoPanel({ lang }) {
   const ui = uiText[lang];
-  const t = circulatoryOverview[lang];
+  const t = basicCellOverview[lang];
 
   return (
     <div
       style={{
-        padding: "20px 24px",
+        padding: "20px 24px 40px 24px",
         background: "linear-gradient(180deg, #020617, #0f172a)",
         color: "#e5e7eb",
         height: "100%",
         overflowY: "auto",
+        boxSizing: "border-box",
       }}
     >
       <h2 style={{ marginBottom: 8 }}>{t.title}</h2>
@@ -29,12 +30,6 @@ export default function CirculatoryInfoPanel({ lang }) {
                 <li key={p}>{p}</li>
               ))}
             </ul>
-          )}
-
-          {section.diseases && (
-            <p style={{ fontSize: 13, opacity: 0.85 }}>
-              <b>{ui.commonIssues}:</b> {section.diseases.join(", ")}
-            </p>
           )}
         </div>
       ))}

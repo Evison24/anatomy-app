@@ -123,7 +123,7 @@ function Section({ title, children }) {
 const overlayStyle = {
   position: "fixed",
   inset: 0,
-  background: "rgba(2,6,23,0.75)",
+  background: "linear-gradient(180deg, #020617, #0f172a)",
   zIndex: 100,
   display: "flex",
   justifyContent: "center",

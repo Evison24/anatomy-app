@@ -39,7 +39,7 @@ export default function Organs({ onSelect }) {
     if (e.object.material?.color) {
       e.object.material.transparent = false;
       e.object.material.opacity = 1;
-      e.object.material.color.set("#22c55e"); // green
+      e.object.material.color.set("#60a5fa");
     }
   };
 

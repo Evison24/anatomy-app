@@ -6,6 +6,7 @@ import InfoModal from "./components/InfoModal";
 import MuscleInfoPanel from "./components/MuscleInfoPanel";
 import CirculatoryInfoPanel from "./components/CirculatoryInfoPanel";
 import NervousInfoPanel from "./components/NervousInfoPanel";
+import BasicCellInfoPanel from "./components/BasicCellInfoPanel";
 
 import { anatomySystems } from "./data/anatomySystems";
 import { navText } from "./data/navText";
@@ -39,7 +40,7 @@ export default function App() {
       <div
         style={{
           height: isMobile ? "auto" : 70,
-          background: "#0b1220",
+          background: "linear-gradient(180deg, #020617, #0f172a)",
           borderBottom: "1px solid rgba(255,255,255,0.08)",
           display: "flex",
           alignItems: "center",
@@ -100,6 +101,18 @@ export default function App() {
               isMobile={isMobile}
             >
               {t.home}
+            </TabButton>
+
+            <TabButton
+              active={view === "basicCell"}
+              onClick={() => {
+                setView("basicCell");
+                setSelectedPart(null);
+                setMobileMenuOpen(false);
+              }}
+              isMobile={isMobile}
+            >
+              {t.basicCell}
             </TabButton>
 
             <TabButton
@@ -180,7 +193,7 @@ export default function App() {
       {/* ===== MAIN CONTENT ===== */}
       <div style={{ flex: 1, overflow: "hidden" }}>
         {view === "home" ? (
-          <ActiveSystem />
+          <ActiveSystem lang={lang} />
         ) : isSplit ? (
           <div
             style={{
@@ -241,6 +254,7 @@ export default function App() {
                 {view === "muscles" && <MuscleInfoPanel lang={lang} />}
                 {view === "circulatory" && <CirculatoryInfoPanel lang={lang} />}
                 {view === "nervous" && <NervousInfoPanel lang={lang} />}
+                {view === "basicCell" && <BasicCellInfoPanel lang={lang} />}
               </div>
             )}
 
@@ -303,6 +317,7 @@ export default function App() {
                       <CirculatoryInfoPanel lang={lang} />
                     )}
                     {view === "nervous" && <NervousInfoPanel lang={lang} />}
+                    {view === "basicCell" && <BasicCellInfoPanel lang={lang} />}
                   </div>
                 </div>
               </div>

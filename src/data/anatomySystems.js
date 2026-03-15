@@ -7,6 +7,7 @@ import { organsMap } from "./organs/organsMap";
 import Muscles from "../models/Muscles";
 import Circulatory from "../models/Circulatory";
 import Nervous from "../models/Nervous";
+import BasicCell from "../models/BasicCell";
 import Home from "../components/Home";
 
 export const anatomySystems = {
@@ -75,6 +76,17 @@ export const anatomySystems = {
       position: [0, 2.4, 9],
       target: [0, 1.2, 0],
       fov: 40,
+    },
+  },
+
+  basicCell: {
+    component: BasicCell,
+    layout: "split",
+    interaction: "hover",
+    camera: {
+      position: [0, 0, 8],
+      target: [0, 0, 0],
+      fov: 50,
     },
   },
 };

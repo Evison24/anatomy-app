@@ -1,4 +1,7 @@
-export default function Home() {
+import { navText } from "../data/navText";
+
+export default function Home({ lang }) {
+  const t = navText[lang];
   return (
     <div
       style={{
@@ -23,15 +26,14 @@ export default function Home() {
         style={{
           fontSize: 42,
           fontWeight: "bold",
-          marginBottom: 12,
+          marginBottom: 24,
           color: "#fbbf24",
           textShadow: "0 2px 10px rgba(0,0,0,0.8)",
           margin: 0,
         }}
       >
-        Pazëll “Homo Sapiens”
+        {t.homeTitle}
       </h1>
-
       {/* Description */}
       <p
         style={{
@@ -47,16 +49,22 @@ export default function Home() {
           overflowY: "hidden",
         }}
       >
-        Ky projekt na ndihmon të kuptojmë më thellë mënyrën se si funksionon
-        trupi i njeriut dhe si bashkëpunojnë organet me njëra-tjetrën për të
-        mbajtur jetën. Përmes këtij pazëlli interaktiv, mësimi nuk mbetet vetëm
-        teori, por kthehet në praktikë dhe eksplorim. Gjithashtu, duke punuar në
-        grup, kemi zhvilluar aftësitë tona në bashkëpunim, kërkim shkencor dhe
-        përdorim të teknologjisë 3D. Ne besojmë se “Pazëll Homo Sapiens” mund të
-        shërbejë si një mjet edukativ i dobishëm për nxënësit e tjerë, duke i
-        ndihmuar ata të mësojnë anatominë në një mënyrë më të thjeshtë, më
-        kreative dhe më tërheqëse.
+        {t.homeDescription}
       </p>
+      {/* Source of Information */}
+      <div
+        style={{
+          marginTop: 20,
+          fontSize: 14,
+          color: "#9ca3af",
+          backgroundColor: "rgba(2, 6, 23, 0.85)",
+          padding: "12px",
+          borderRadius: 8,
+          maxWidth: 600,
+        }}
+      >
+        {t.homeSource}
+      </div>{" "}
     </div>
   );
 }

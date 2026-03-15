@@ -9,7 +9,7 @@ export default function MuscleInfoPanel({ lang }) {
     <div
       style={{
         padding: "20px 24px",
-        background: "#020617",
+        background: "linear-gradient(180deg, #020617, #0f172a)",
         color: "#e5e7eb",
         height: "100%",
         overflowY: "auto",
