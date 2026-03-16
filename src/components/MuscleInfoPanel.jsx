@@ -8,7 +8,7 @@ export default function MuscleInfoPanel({ lang }) {
   return (
     <div
       style={{
-        padding: "20px 24px",
+        padding: "20px 24px 40px 24px",
         background: "linear-gradient(180deg, #020617, #0f172a)",
         color: "#e5e7eb",
         height: "100%",
@@ -17,6 +17,7 @@ export default function MuscleInfoPanel({ lang }) {
           window.innerWidth >= 768
             ? "1px solid rgba(255,255,255,0.08)"
             : "none",
+        boxSizing: "border-box",
       }}
     >
       <h2 style={{ marginBottom: 8 }}>{t.title}</h2>

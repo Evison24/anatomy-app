@@ -8,11 +8,12 @@ export default function NervousInfoPanel({ lang }) {
   return (
     <div
       style={{
-        padding: "20px 24px",
+        padding: "20px 24px 40px 24px",
         background: "linear-gradient(180deg, #020617, #0f172a)",
         color: "#e5e7eb",
         height: "100%",
         overflowY: "auto",
+        boxSizing: "border-box",
       }}
     >
       <h2 style={{ marginBottom: 8 }}>{t.title}</h2>
