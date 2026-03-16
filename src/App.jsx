@@ -221,9 +221,9 @@ export default function App() {
                 <button
                   onClick={() => setInfoPanelOpen(true)}
                   style={{
-                    position: "absolute",
-                    bottom: 20,
-                    right: 20,
+                    position: "fixed",
+                    bottom: 15,
+                    right: 15,
                     padding: "10px 16px",
                     borderRadius: 8,
                     border: "none",
@@ -232,7 +232,7 @@ export default function App() {
                     fontWeight: 600,
                     fontSize: 12,
                     cursor: "pointer",
-                    zIndex: 10,
+                    zIndex: 999,
                     boxShadow: "0 4px 10px rgba(37,99,235,0.25)",
                   }}
                 >
